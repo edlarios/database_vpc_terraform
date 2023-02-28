@@ -377,20 +377,6 @@ resource "aws_instance" "edlarios_web" {
   // have 1 security group for the EC2 instances.
   vpc_security_group_ids = [aws_security_group.edlarios_web_sg.id]
 
- connection {
-    type        = "ssh"
-    host        = self.public_ip
-    user        = "ubuntu"
-    private_key = file("~/.ssh/id_rsa")
-    timeout     = "4m"
-  }
-  provisioner "remote-exec" {
-    inline = [
-      "sudo apt-get update",
-      "sudo apt install mysql-client -y"
-    ]
-  }
-
   // We are tagging the EC2 instance with the name "edlarios_db_" followed by
   // the count index
   tags = {
