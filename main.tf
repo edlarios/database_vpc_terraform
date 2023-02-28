@@ -107,7 +107,7 @@ resource "aws_subnet" "edlarios_public_subnet" {
   tags = {
     Name = "edlarios_public_subnet_${count.index}"
   }
-   map_public_ip_on_launch = true
+  map_public_ip_on_launch = true
 }
 
 // Create a group of private subnets based on the variable subnet_count.private
