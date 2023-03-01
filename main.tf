@@ -227,8 +227,7 @@ resource "aws_security_group" "edlarios_web_sg" {
     from_port   = "22"
     to_port     = "22"
     protocol    = "tcp"
-    // This is using the variable "my_ip"
-    cidr_blocks = ["${var.my_ip}/32"]
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   // This outbound rule is allowing all outbound traffic
