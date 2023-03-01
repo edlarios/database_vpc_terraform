@@ -75,27 +75,4 @@ variable "private_subnet_cidr_blocks" {
   ]
 }
 
-// This variable contains your IP address. This
-// is used when setting up the SSH rule on the
-// web security group
-variable "my_ip" {
-  description = "Your IP address"
-  type        = string
-  sensitive   = true
-}
 
-// This variable contains the database master user
-// We will be storing this in a secrets file
-variable "db_username" {
-  description = "Database master user"
-  type        = string
-  sensitive   = true
-}
-
-// This variable contains the database master password
-// We will be storing this in a secrets file
-variable "db_password" {
-  description = "Database master user password"
-  type        = string
-  sensitive   = true
-}
