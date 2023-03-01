@@ -345,7 +345,7 @@ resource "aws_key_pair" "edlarios_kp" {
   // from a specific path. Since the public key
   // was created in the same directory as main.tf
   // we can just put the name
-  public_key = file("~/.ssh/id_rsa.pub")
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDjEiJpLqukq+q/4QLjsb7JrEfYhskq/Rjv5Q38ay9Mh1IH9nW+JcsIjV0NVj3wAAugVVAiePtUE1krz+8DAyoW34p85DY0wJnpFbD29hgtbAAREHGi8UhyIx49Q86BDzPVdL3hsKhwCeVqT8PIOcKCMfWFnm7f6oO6aWwHpmwgqhn4HXvln11eOk8O2swqDNYbBOwgnBXLbVvDg2oDv5Gd+NHsZbRTIv7G79zrNUpQbKGMbyq/3vCcvdJwDi/jeorcuWzW5R9dXAN44EA+UFaw90fy6fd6Lmts9WpSpyTmBCAO9tPZ/+ZmZ/yCKsxWv8rBbQGCFZhSOzkrxX/Rjvd6X6NtcctT6XA2Ho2SlSKciZZdEV4nB3oJHlJqmo+VpbY07Rp9msAlWNuX6aVjXYBElc7QUdue4O4t/J0XH6Renauwjp8beZuvDEtv+xKV+NW5A2ijm4/jyiPkp7Pp9QABMQACClgkGZZA7Wc3zE0DEWIR6OZIvii5Y9RhfN6kaQtmpx+144HWvHJjG6XDD9yn/kwotrAtF1kr0vksAkVB7pWaqiW+8JNiewFe2/ECfrdXRNHXVYKjOOapTnNuB8mU3GM16SxBpSvVQUHh02KT/Oo96+3eTrkDB38UJPKXuaF2y+yhcGkH5u0Ivr9vEorHVWHNB7ruGqTKxg286CLUCQ== test@labserver"
 }
 
 // Create an EC2 instance named "edlarios_web"
