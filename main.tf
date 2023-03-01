@@ -6,12 +6,12 @@ terraform {
     // is aws, and we want version 4.0.0
     aws = {
       source  = "hashicorp/aws"
-      version = ">= 1.1.0"
+      version = "~> 4.0"
     }
   }
 
   // This is the required version of Terraform
-  required_version = "~> 1.2.8"
+  required_version = ">= 1.1.0"
 }
 
 // Here we are configuring our aws provider. 
